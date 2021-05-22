@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-post',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-
+ PostRef= new FormGroup({
+   title:new FormControl(),
+   post: new FormControl()
+ }
+ )
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  sharePost(){
+
   }
 
 }

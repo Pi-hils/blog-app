@@ -1,1 +1,14 @@
-<p>post works!</p>
+<div>
+  <h2><i>Welcome User It's time to share, learn, reflect..</i></h2>
+    <label>Title</label><br>
+    <form [formGroup]="PostRef" class="form">
+      <!-- user nname should be posted when the person makes a post -->
+      <input type="text" placeholder="Title" formControlName="title"/><br>
+    <label>Share, I am listening</label><br>
+    <textarea class="form-control" placeholder="pour it all out.."  rows="4" formControlName="post" ></textarea><br><br>
+
+    <input type="button" value="Post!" (click)="sharePost()">
+    <hr>
+ </form>
+
+
