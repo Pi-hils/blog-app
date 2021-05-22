@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+div{
+  text-align: center;
+}
+
+li{
+  font-size: 20px;
+  text-decoration: none;
+  padding:10px;
+  display: inline-flex;
+}
+
+a:hover{
+  color:teal;
+  background-color: aquamarine;
+  text-decoration: none;
+}
