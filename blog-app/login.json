@@ -1,8 +1,13 @@
 {
-  "info": [
+  "login": [
     {
       "user": "Hilda",
       "pass":"123"
+    },
+
+    {
+      "user": "Ama",
+      "pass": "abc123"
     }
   ]
 }
