@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { LoginService } from '../login.service'
+import { Router} from '@angular/router'
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
 
  result?:string="";
 
-  constructor(public ls:LoginService) { }
+  constructor(public ls:LoginService, public router:Router) { }
 
   ngOnInit(): void {
   }
@@ -32,6 +33,7 @@ export class LoginComponent implements OnInit {
         })
         if(info>0){
           this.result="Successfully Logged In"
+          this.router.navigate(["post"]);
         }else{
           this.result="failure, please try again"
         }
