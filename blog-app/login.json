@@ -1,5 +1,6 @@
 {
-  "login": [
+  "login": 
+  [
     {
       "user": "Hilda",
       "pass":"123"
@@ -8,6 +9,18 @@
     {
       "user": "Ama",
       "pass": "abc123"
+    }
+  ],
+  
+  "blog":[
+    {
+      "title":"My day",
+      "comment":"Learning Angular is not easy boi"
+    },
+
+    {
+      "title":"Monday",
+      "comment":"Crud day"
     }
   ]
 }
