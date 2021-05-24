@@ -43,4 +43,11 @@ export class PostComponent implements OnInit {
     });
   }
 
+  deletePost(id:any){
+   // console.log("Deleted"+id)
+   this.postser.deletePostInfo(id).subscribe(result=>{
+    this.postser.retrieveAllInfo().subscribe(result=>this.blog_posts=result);
+  })
+  }
+
 }

@@ -25,6 +25,8 @@ export class LoginService {
     return this.http.get<Post[]>("http://localhost:3000/blogs")
   }
 
-
+  deletePostInfo(id:any):Observable<Post>{
+    return this.http.delete<Post>("http://localhost:3000/blogs/"+id)
+  }
 
 }
