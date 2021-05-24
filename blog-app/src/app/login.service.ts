@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs'
 import { Login } from './login.model'
-// import { Post } from './post.model'
+import { Post } from './post.model'
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +11,10 @@ export class LoginService {
 
   constructor(public http:HttpClient) { }
 
-  storePostInfo(blog:any){
-    this.http.post("http://localhost:3000/blogs", blog).
-    subscribe(result=>console.log(result),error=>console.log(error))
+  storePostInfo(blog:any):Observable<Post>{
+    // this.http.post("http://localhost:3000/blogs", blog). subscribe is for confirmation
+    // subscribe(result=>console.log(result),error=>console.log(error))
+    return this.http.post<Post>("http://localhost:3000/blogs", blog)
   }
 
   checkLogin():Observable<Login[]>{
