@@ -15,3 +15,9 @@ a:hover{
   background-color: aquamarine;
   text-decoration: none;
 }
+
+table{
+  border:0;
+  padding:10px;
+}
+  

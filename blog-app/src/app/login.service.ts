@@ -11,15 +11,20 @@ export class LoginService {
 
   constructor(public http:HttpClient) { }
 
+  checkLogin():Observable<Login[]>{
+    return this.http.get<Login[]>("http://localhost:3000/login");
+  }
+
   storePostInfo(blog:any):Observable<Post>{
     // this.http.post("http://localhost:3000/blogs", blog). subscribe is for confirmation
     // subscribe(result=>console.log(result),error=>console.log(error))
     return this.http.post<Post>("http://localhost:3000/blogs", blog)
   }
 
-  checkLogin():Observable<Login[]>{
-    return this.http.get<Login[]>("http://localhost:3000/login");
+  retrieveAllInfo(){
+    return this.http.get<Post[]>("http://localhost:3000/blogs")
   }
+
 
 
 }

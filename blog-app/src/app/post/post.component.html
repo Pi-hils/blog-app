@@ -10,6 +10,17 @@
 
     <input type="submit" value="Post!" (click)="sharePost()">
       {{resultMessage}}
+      <hr />
+      <table class="table">
+        <tr>
+          <th>Title</th>
+          <th>Post</th>
+        </tr>
+        <tr *ngFor="let a_post of blog_posts">
+          <td>{{a_post.title}}</td>
+          <td>{{a_post.comment}}</td>
+        </tr>
+      </table>
  </form>
 
 
