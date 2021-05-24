@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { LoginService } from '../login.service'
 
 @Component({
   selector: 'app-post',
@@ -8,17 +9,21 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class PostComponent implements OnInit {
  postRef= new FormGroup({
-   title:new FormControl(),
-   post: new FormControl()
+  //id:new FormControl(),
+   title: new FormControl(),
+   comment: new FormControl()
  });
 
-  constructor() { }
+  constructor( public postser: LoginService) { }
 
   ngOnInit(): void {
   }
 
   sharePost(){
-    console.log("Post shared")
+    //console.log("Post shared")
+    let post = this.postRef.value;
+    console.log(post);
+    this.postser.storePostInfo(post);
   }
 
 }

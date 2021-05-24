@@ -1,5 +1,6 @@
 export class Post {
-  constructor(public title:any,
+  constructor(public id:number,
+    public title:any,
       public comment:any
       ){}
 }

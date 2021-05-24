@@ -1,26 +1,34 @@
 {
-  "login": 
-  [
+  "login": [
     {
       "user": "Hilda",
-      "pass":"123"
+      "pass": "123"
     },
-
     {
       "user": "Ama",
       "pass": "abc123"
     }
   ],
-  
-  "blog":[
+  "blogs": [
     {
-      "title":"My day",
-      "comment":"Learning Angular is not easy boi"
+      "id": "1",
+      "title": "My day",
+      "comment": "Learning Angular is not easy boi"
     },
-
     {
-      "title":"Monday",
-      "comment":"Crud day"
+      "id": "2",
+      "title": "Monday",
+      "comment": "Crud day"
+    },
+    {
+      "title": "Hilda",
+      "comment": "hi",
+      "id": "9INvPvm"
+    },
+    {
+      "title": "My CRUD App",
+      "comment": "How it's going, well....\nit's actually nice to revisit what we have learned",
+      "id": "XCwfXH4"
     }
   ]
 }
