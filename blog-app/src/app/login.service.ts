@@ -29,4 +29,8 @@ export class LoginService {
     return this.http.delete<Post>("http://localhost:3000/blogs/"+id)
   }
 
+  // updatePostInfo(id:any){
+    // return this.http.put<Post>("http://localhost:3000/blogs/"+id)
+  // }
+
 }

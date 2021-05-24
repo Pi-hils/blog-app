@@ -16,11 +16,13 @@
         <tr>
           <th>Title</th>
           <th>Post</th>
+          <th>Edit Post</th>
           <th>Remove Post</th>
         </tr>
         <tr *ngFor="let a_post of blog_posts">
           <td>{{a_post.title}}</td>
           <td>{{a_post.comment}}</td>
+          <td><input type="button" value="Update" (click)="updatePost(a_post)"/></td>
           <td><input type="button" value="Delete" (click)="deletePost(a_post.id)"/></td>
         </tr>
       </table>

@@ -11,6 +11,7 @@ import { Post } from '../post.model';
 })
 export class PostComponent implements OnInit {
  postRef= new FormGroup({
+   id: new FormControl(),
    title: new FormControl(),
    comment: new FormControl()
  });
@@ -48,6 +49,11 @@ export class PostComponent implements OnInit {
    this.postser.deletePostInfo(id).subscribe(result=>{
     this.postser.retrieveAllInfo().subscribe(result=>this.blog_posts=result);
   })
+  }
+
+  updatePost(post:any){
+    console.log(post);
+     this.postRef.setValue(post);
   }
 
 }
