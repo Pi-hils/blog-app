@@ -23,19 +23,21 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
     console.log("Onit");
     this.postser.retrieveAllInfo().subscribe(result=>this.blog_posts=result);
-  console.log("here")
+
+  }
+  retrievePost(){
+
   }
 
   sharePost(){
     //console.log("Post shared")
     let post = this.postRef.value;
-    console.log(post);
+   // console.log(post);
     this.postser.storePostInfo(post).subscribe(result=>{
-      // if(post != null){
+
       this.resultMessage="Success"
-      // }else{
-      //   this.resultMessage="Please fill in space"
-      // }
+      this.postser.retrieveAllInfo().subscribe(result=>this.blog_posts=result)
+      
     },error=>{
       this.resultMessage="Not stored"
     });
