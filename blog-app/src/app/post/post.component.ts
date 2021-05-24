@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { LoginService } from '../login.service'
@@ -14,6 +15,8 @@ export class PostComponent implements OnInit {
    comment: new FormControl()
  });
 
+  resultMessage:string=""
+
   constructor( public postser: LoginService) { }
 
   ngOnInit(): void {
@@ -23,7 +26,11 @@ export class PostComponent implements OnInit {
     //console.log("Post shared")
     let post = this.postRef.value;
     console.log(post);
-    this.postser.storePostInfo(post);
+    this.postser.storePostInfo(post).subscribe(result=>{
+      this.resultMessage="Success"
+    },error=>{
+      this.resultMessage="Not stored"
+    });
   }
 
 }
