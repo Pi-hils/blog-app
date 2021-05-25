@@ -1,12 +1,12 @@
 <div>
-  <h2>Please Enter your login information</h2>
-    <label>User Name</label><br>
+  <h4><i>Please Enter your login information</i></h4>
+    <label><strong>User Name</strong></label><br>
      <form [formGroup]="loginRef" class="form">
        <input type="text" placeholder="username.." formControlName="user"/><br>
-       <label>Password</label><br>
+       <label><strong>Password</strong></label><br>
        <input type="text" placeholder="enter password" formControlName="pass" /><br><br>
-       <input type="submit" value="Login!" (click)="checkLoginDetails()">
-       <input type="reset" value="Reset">
+       <input type="submit" value="Login!" (click)="checkLoginDetails()" class="btn btn-success">
+       <input type="reset" value="Reset" class="btn btn-secondary">
      </form>
      {{result}}
 </div>

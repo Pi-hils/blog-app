@@ -16,6 +16,8 @@ export class PostComponent implements OnInit {
    comment: new FormControl()
  });
 
+  user?:any
+  
   resultMessage:string=""
   blog_posts?:Array<Post> //to retrieve records one by one
   buttonValue:string="Store Rec"
@@ -23,6 +25,10 @@ export class PostComponent implements OnInit {
   constructor( public postser: LoginService) { }
 
   ngOnInit(): void {
+    if(sessionStorage != null){
+      this.user = sessionStorage.getItem("userInfo")
+    }
+
     console.log("Onit");
     this.postser.retrieveAllInfo().subscribe(result=>this.blog_posts=result);
 

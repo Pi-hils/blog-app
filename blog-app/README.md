@@ -1,9 +1,9 @@
 # BlogApp
 DESCRIPTION
 
-#### Project objective:\
+#### Project objective:
 
-Build an Angular app where users can read and add blog posts.\
+Build an Angular app where users can read and add blog posts.
 <br>
 Background of the problem statement:
 <br>
@@ -15,13 +15,13 @@ You are a web developer at a company that provides web solutions. The company wa
 4. Setting up a JSON server for testing until backend APIs are ready
 5. Testing the application
 
-You must use the following tools:\
+You must use the following tools:
 
 1. Angular: To build the application
 2. NgModules: To configure the injector and the compiler and organize related components
 3. JSON Server: To build a placeholder backend for app development and testing
 4. Angular Router: To navigate within the app using URL links
-5. Jasmine/Karma: To test the application\
+5. Jasmine/Karma: To test the application
 
 Following requirements should be met:
 
@@ -37,7 +37,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component.\
+Run `ng generate component component-name` to generate a new component.
 ng g c login\
 <!-- login leads to post page -->
 ng g c post\
