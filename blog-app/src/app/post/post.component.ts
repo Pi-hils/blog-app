@@ -56,10 +56,10 @@ export class PostComponent implements OnInit {
        this.buttonValue="Store Rec";
      })
   }
+  this.postRef.reset();
   }
 
   deletePost(id:any){
-   // console.log("Deleted"+id)
    this.postser.deletePostInfo(id).subscribe(result=>{
     this.postser.retrieveAllInfo().subscribe(result=>this.blog_posts=result);
   })
