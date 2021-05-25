@@ -7,14 +7,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PostComponent } from './post/post.component';
 import { RegisterComponent } from './register/register.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ContactusComponent } from './contactus/contactus.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PostComponent,
-    RegisterComponent
+    RegisterComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,

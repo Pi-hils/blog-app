@@ -11,11 +11,6 @@
   ],
   "blogs": [
     {
-      "id": "1",
-      "title": "My day",
-      "comment": "Learning Angular is not easy boi"
-    },
-    {
       "id": "2",
       "title": "Monday",
       "comment": "Crud day"
@@ -36,11 +31,6 @@
       "id": "eIdzRTV"
     },
     {
-      "title": "tAKE 2",
-      "comment": "Action",
-      "id": "jJqVNNe"
-    },
-    {
       "title": "Now showing",
       "comment": "Pre css ",
       "id": "f3uE4fA"
@@ -49,6 +39,11 @@
       "title": "try again",
       "comment": "!",
       "id": "4-z6m1M"
+    },
+    {
+      "id": "XUu9vR5",
+      "title": "Update",
+      "comment": "Testing- Spelling"
     }
   ]
 }

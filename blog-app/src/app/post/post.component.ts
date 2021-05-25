@@ -18,6 +18,7 @@ export class PostComponent implements OnInit {
 
   resultMessage:string=""
   blog_posts?:Array<Post> //to retrieve records one by one
+  buttonValue:string="Store Rec"
 
   constructor( public postser: LoginService) { }
 
@@ -32,6 +33,8 @@ export class PostComponent implements OnInit {
 
   sharePost(){
     //console.log("Post shared")
+    if(this.buttonValue=="Store Rec"){
+
     let post = this.postRef.value;
    // console.log(post);
     this.postser.storePostInfo(post).subscribe(result=>{
@@ -41,7 +44,18 @@ export class PostComponent implements OnInit {
       
     },error=>{
       this.resultMessage="Not stored"
-    });
+    })
+  }else{
+    console.log("Update the record please")
+    let post = this.postRef.value;
+    // console.log(post);
+     this.postser.updatePostInfo(post).subscribe(result=>{
+ 
+       this.resultMessage="Post Successfully updated"
+       this.postser.retrieveAllInfo().subscribe(result=>this.blog_posts=result)
+       this.buttonValue="Store Rec";
+     })
+  }
   }
 
   deletePost(id:any){
@@ -52,8 +66,10 @@ export class PostComponent implements OnInit {
   }
 
   updatePost(post:any){
-    console.log(post);
-     this.postRef.setValue(post);
+    //console.log(post);
+      this.postRef.setValue(post);
+      this.buttonValue="Update";
+
   }
 
 }
