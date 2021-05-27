@@ -27,21 +27,15 @@ describe('LoginComponent', () => {
     const fixture = TestBed.createComponent(LoginComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.loginheading').textContent).toContain('Please enter your login information');
+    expect(compiled.querySelector('.login').textContent).toContain('Please enter your login information');
   })
 
   it('should render login headings', () => {
     const fixture = TestBed.createComponent(LoginComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-   expect(compiled.querySelector('.loginheading').textContent).toContain('Password');
-    expect(compiled.querySelector('.loginheading').textContent).toContain('User Name');
+    expect(compiled.querySelector('.login').textContent).toContain('Password');
+    expect(compiled.querySelector('.login').textContent).toContain('User Name');
   })
 });
 
-// it('should give title', () => {
-//   const fixture = TestBed.createComponent(AppComponent);
-//   fixture.detectChanges();
-//   const compiled = fixture.nativeElement;
-//   expect(compiled.querySelector('.center').textContent).toContain('Welcome to Pen to Paper');
-// })
