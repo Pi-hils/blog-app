@@ -22,4 +22,12 @@ describe('ContactusComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render contact headings-firstname', () => {
+    const fixture = TestBed.createComponent(ContactusComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('label').textContent).toContain('First Name');
+  })
+
 });

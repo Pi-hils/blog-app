@@ -9,11 +9,14 @@ import { Router} from '@angular/router'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
  loginRef = new FormGroup({
    user: new FormControl(),
    pass: new FormControl()
  });
 
+ title ="Please enter your login information"
+ 
  result?:string="";
 
   constructor(public ls:LoginService, public router:Router) { }

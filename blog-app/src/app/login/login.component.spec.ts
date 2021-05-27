@@ -25,17 +25,18 @@ describe('LoginComponent', () => {
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(LoginComponent);
+    fixture.componentInstance.title = 'Please enter your login information';
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.login').textContent).toContain('Please enter your login information');
+    expect(compiled.querySelector('h4').textContent).toContain('Please enter your login information');
   })
 
   it('should render login headings', () => {
     const fixture = TestBed.createComponent(LoginComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.login').textContent).toContain('Password');
-    expect(compiled.querySelector('.login').textContent).toContain('User Name');
+    expect(compiled.querySelector('label').textContent).toContain('Password');
+    expect(compiled.querySelector('label').textContent).toContain('User Name');
   })
 });
 
