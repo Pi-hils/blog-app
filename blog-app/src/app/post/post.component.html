@@ -1,16 +1,15 @@
 <div class="myClass">
-  <h4><i>Welcome {{user}}! It's time to share, learn, reflect..</i></h4>
+  <h4><i>Welcome! It's time to share, learn, reflect..</i></h4>
    
     <form [formGroup]="postRef" class="form">
       <label>Title</label><br>
-      <!-- user nname should be posted when the person makes a post -->
-    <input type="text" placeholder="Caption" formControlName="title" /><br>
+    <input type="text" placeholder="Caption" formControlName="title"/><br>
     <label>Share, I am listening</label><br>
-    <textarea class="form-control" placeholder="pour it all out.."  rows="4" formControlName="comment" ></textarea><br>
+    <textarea placeholder="pour it all out.."  rows="4" formControlName="comment"></textarea><br>
 
     <input type="submit" [value]="buttonValue"
-     (click)="sharePost()" />
-    <input type="reset" value="Clear" />
+     (click)="sharePost()" class="btn btn-warning"/>
+    <input type="reset" value="Clear" class="btn btn-danger"/>
       {{resultMessage}}
       <hr />
       
@@ -24,8 +23,8 @@
         <tr *ngFor="let a_post of blog_posts">
           <td>{{a_post.title}}</td>
           <td>{{a_post.comment}}</td>
-          <td><input type="button" value="Delete" (click)="deletePost(a_post.id)"/></td>
-          <td><input type="button" value="Update" (click)="updatePost(a_post)"/></td>
+          <td><input type="button" value="Delete" (click)="deletePost(a_post.id)" class="btn btn-danger"/></td>
+          <td><input type="button" value="Update" (click)="updatePost(a_post)" class="btn btn-success"/></td>
         </tr>
       </table>
  </form>

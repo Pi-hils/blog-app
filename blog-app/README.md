@@ -38,6 +38,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component.
+
 ng g c login\
 <!-- login leads to post page -->
 ng g c post\

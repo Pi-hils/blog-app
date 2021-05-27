@@ -16,8 +16,6 @@ export class LoginService {
   }
 
   storePostInfo(blog:any):Observable<Post>{
-    // this.http.post("http://localhost:3000/blogs", blog). subscribe is for confirmation
-    // subscribe(result=>console.log(result),error=>console.log(error))
     return this.http.post<Post>("http://localhost:3000/blogs", blog)
   }
 

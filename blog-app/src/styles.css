@@ -37,12 +37,12 @@ table{
 }
 
 #welcome .center {
-  font-size: 50px;
+   font-size: 50px; 
   position: absolute;
   bottom: 0;
   top: 8%;
-  color: #0c030c;
-  width: 100%;
-  padding: 20px;
+   color: #0c030c; 
+
 }
-  
+
+   
