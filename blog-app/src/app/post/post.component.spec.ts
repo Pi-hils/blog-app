@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed, TestComponentRenderer } from '@angular/core/testing';
 import { PostComponent } from './post.component';
+import { FormsModule } from '@angular/forms';
 
 describe('PostComponent', () => {
   let component: PostComponent;
@@ -8,7 +8,8 @@ describe('PostComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PostComponent ]
+      declarations: [ PostComponent, TestComponentRenderer ],
+      imports: [FormsModule],
     })
     .compileComponents();
   });
@@ -27,7 +28,7 @@ describe('PostComponent', () => {
     const fixture = TestBed.createComponent(PostComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.myClass').textContent).toContain('Welcome');
+    expect(compiled.querySelector('.myClass').textContent).toContain("Title");
   });
 
   it('should render textbox', () => {

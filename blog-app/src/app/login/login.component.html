@@ -1,9 +1,9 @@
-<div>
-  <h4><i>Please Enter your login information</i></h4>
-    <label><strong>User Name</strong></label><br>
+<div .container>
+  <h4><i>Please enter your login information</i></h4>
+    <label class="loginheading"><strong>User Name</strong></label><br>
      <form [formGroup]="loginRef" class="form">
-       <input type="text" placeholder="username.." formControlName="user"/><br>
-       <label><strong>Password</strong></label><br>
+       <input class="textbox" type="text" placeholder="username.." formControlName="user"/><br>
+       <label class="loginheading"><strong>Password</strong></label><br>
        <input type="text" placeholder="enter password" formControlName="pass" /><br><br>
        <input type="submit" value="Login!" (click)="checkLoginDetails()" class="btn btn-success">
        <input type="reset" value="Reset" class="btn btn-secondary">

@@ -26,11 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('blog-app');
   });
 
-  it('should render title', () => {
+  it('should give title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('blog-app app is running!');
     expect(compiled.querySelector('.center').textContent).toContain('Welcome to Pen to Paper');
   });
 });
