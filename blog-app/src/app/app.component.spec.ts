@@ -31,5 +31,6 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('blog-app app is running!');
+    expect(compiled.querySelector('.center').textContent).toContain('Welcome to Pen to Paper');
   });
 });

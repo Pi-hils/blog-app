@@ -22,4 +22,19 @@ describe('PostComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render title', () => {
+    const fixture = TestBed.createComponent(PostComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.myClass').textContent).toContain('Welcome');
+  });
+
+  it('should render textbox', () => {
+    const fixture = TestBed.createComponent(PostComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('.myClass').textContent).toContain('Welcome');
+  });
+
 });

@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PostComponent } from './post/post.component';
-import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactusComponent } from './contactus/contactus.component'
 
@@ -15,7 +14,6 @@ import { ContactusComponent } from './contactus/contactus.component'
     AppComponent,
     LoginComponent,
     PostComponent,
-    RegisterComponent,
     ContactusComponent
   ],
   imports: [
